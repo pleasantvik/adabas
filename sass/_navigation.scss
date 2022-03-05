@@ -1,0 +1,122 @@
+.navigation {
+  display: flex;
+  align-items: center;
+  padding: 3rem;
+  position: relative;
+
+  &__logo {
+    height: 4rem;
+    margin-right: auto;
+    cursor: pointer;
+    // flex: 0 0 20%;
+  }
+
+  &__icon {
+    height: 2.5rem;
+    width: 2.5rem;
+    fill: var(--color-primary);
+  }
+
+  &__nav {
+    @media only screen and (max-width: $bp-medium) {
+      background-color: rgba(255, 255, 255, 0.9);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      transform: translateX(100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s;
+      /* HIDE THE Nav */
+      opacity: 0;
+
+      /* Make it unaccessible to mouse and keyboard */
+      pointer-events: none;
+
+      /* Hide from screen reader */
+      visibility: hidden;
+    }
+  }
+
+  &__icon-close {
+    display: none;
+  }
+  &__list {
+    display: flex;
+    list-style: none;
+    align-items: center;
+
+    @media only screen and (max-width: $bp-medium) {
+      flex-direction: column;
+    }
+  }
+
+  /* when the  class navigation__nav-open is added to the parent, the nav should show */
+  &__nav-open &__nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  &__nav-open &__icon-menu {
+    display: none;
+  }
+  &__nav-open &__icon-close {
+    display: block;
+  }
+  &__item {
+    &:not(:last-child) {
+      margin-right: 2rem;
+
+      @media only screen and (max-width: $bp-medium) {
+        margin-bottom: 2rem;
+        margin-right: 0;
+      }
+    }
+  }
+  &__link {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      color: var(--color-grey-dark-1);
+
+      display: inline-block;
+      transition: all 0.2s;
+    }
+
+    &:hover {
+      color: var(--color-primary);
+    }
+
+    &--cta:link,
+    &--cta:visited {
+      background-color: var(--color-primary);
+      color: #fff;
+      padding: 1.2rem 2.4rem;
+    }
+    &--cta:hover,
+    &--cta:active {
+      color: currentColor;
+      background-color: #fff;
+    }
+  }
+}
+
+.btn-mobile-nav {
+  border: none;
+  cursor: pointer;
+  margin-left: 2rem;
+
+  display: none;
+
+  @media only screen and (max-width: $bp-medium) {
+    display: block;
+    z-index: 999;
+  }
+}

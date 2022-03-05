@@ -1,0 +1,126 @@
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  background-color: var(--color-grey-light-2);
+  position: relative;
+  // box-shadow: var(--shadow-dark);
+
+  @media only screen and (max-width: $bp-largest) {
+    max-width: 100%;
+    width: 100%;
+  }
+  @media only screen and (max-width: $bp-small) {
+    overflow: hidden;
+  }
+}
+
+.section-works {
+  background-image: url(../img/mapbase-2x.png);
+  text-align: center;
+  background-size: cover;
+  padding: 3.2rem 4.8rem;
+
+  width: 100%;
+
+  @media only screen and (max-width: $bp-large) {
+    padding: 2.4rem;
+  }
+}
+
+.card {
+  display: flex;
+  justify-content: space-around;
+  box-shadow: var(--shadow-dark);
+  margin-top: 3.2rem;
+  // overflow: hidden;
+
+  @media only screen and (max-width: $bp-medium) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__content {
+    padding: 3rem 6rem;
+
+    &:not(:last-child) {
+      margin-right: 2rem;
+
+      @media only screen and (max-width: $bp-large) {
+        margin-right: 1.2rem;
+      }
+      @media only screen and (max-width: $bp-medium) {
+        margin-right: 0rem;
+        margin-bottom: 4rem;
+      }
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    &-1 {
+      background-color: var(--color-primary);
+      color: #fff;
+    }
+    &-2 {
+      background-color: #fff;
+    }
+    &-3 {
+      background-color: #fff;
+
+      @media only screen and (max-width: $bp-medium) {
+        margin-bottom: 4rem;
+      }
+    }
+  }
+
+  &__illustration {
+    // height: 80%;
+    width: 100%;
+
+    @media only screen and (max-width: $bp-large) {
+      width: 80%;
+    }
+  }
+
+  &__text {
+    font-size: 2rem;
+    color: currentColor;
+  }
+}
+
+.footer {
+  font-size: 1.8rem;
+  display: flex;
+  margin-top: 4rem;
+  padding: 4rem 8rem;
+  justify-content: space-around;
+  align-items: center;
+
+  & > * {
+    @media only screen and (max-width: $bp-small) {
+      margin-bottom: 2rem;
+    }
+  }
+  @media only screen and (max-width: $bp-small) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__logo {
+    height: 50%;
+  }
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__icon {
+    height: 2rem;
+    width: 2rem;
+    fill: var(--color-primary);
+    cursor: pointer;
+  }
+}

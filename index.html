@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="description"
+      content="Adaba, a social network that uses status upload to help you make when with ease while having fun"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+
+    <script defer src="app.js"></script>
+
+    <title>adaba &mdash; making money via status update</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navigation">
+        <img src="img/logo-2x.png" alt="Logo" class="navigation__logo" />
+        <nav class="navigation__nav">
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a href="#" class="navigation__link">How it works</a>
+            </li>
+            <li class="navigation__item">
+              <a
+                href="#"
+                class="navigation__link navigation__link--cta open-modal"
+                >Sign up</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <button class="btn-mobile-nav">
+          <svg class="navigation__icon navigation__icon-menu">
+            <use xlink:href="img/sprite.svg#icon-menu"></use>
+          </svg>
+          <svg class="navigation__icon navigation__icon-close">
+            <use xlink:href="img/sprite.svg#icon-cross"></use>
+          </svg>
+        </button>
+      </div>
+
+      <header class="header">
+        <div class="header__text-box">
+          <h1 class="heading-primary">
+            Give your <span>business a wider</span> reach
+          </h1>
+          <p class="header__description">
+            Are you an instagram user or a business owner?
+            <span>Use Adaba and give your product a wider reach.</span>
+            <span>Making money with fun can't get any funnier</span>
+          </p>
+        </div>
+        <div class="header__img-box">
+          <img
+            srcset="
+              img/globe-.5x.png  300w,
+              img/globe-1x.png   600w,
+              img/globe-2x.png  1200w
+            "
+            sizes="(max-width: 68.75em) 50vw, (max-width: 56.25em) 50vw, (max-width: 43.75em) 90vw, (max-width: 37.5em) 90vw, 600px"
+            alt="Globe Image"
+            src="img/globe-2x.png"
+            class="header__img"
+          />
+        </div>
+      </header>
+
+      <main>
+        <section class="section-works">
+          <h2 class="heading-secondary">How it works</h2>
+
+          <div class="card">
+            <div class="card__content card__content-1">
+              <img class="card__illustration" src="img/amico.png" alt="Earn" />
+              <p class="card__text">Sign up</p>
+            </div>
+            <div class="card__content card__content-2">
+              <img
+                class="card__illustration"
+                src="img/amico-2.png"
+                alt="Earn"
+              />
+              <p class="card__text">Grant few permission</p>
+            </div>
+            <div class="card__content card__content-3">
+              <img class="card__illustration" src="img/pana.png" alt="Earn" />
+              <p class="card__text">Start Earning</p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <img src="img/logo-1x.png" alt="Adaba" class="footer__logo" />
+
+        <p class="paragraph">Policy</p>
+
+        <div class="footer__socials">
+          <p class="paragraph">Reach Out to us</p>
+          <div class="social">
+            <svg class="social__icon">
+              <use xlink:href="img/sprite.svg#icon-twitter"></use>
+            </svg>
+            <svg class="social__icon">
+              <use xlink:href="img/sprite.svg#icon-facebook2"></use>
+            </svg>
+            <svg class="social__icon">
+              <use xlink:href="img/sprite.svg#icon-instagram"></use>
+            </svg>
+          </div>
+        </div>
+      </footer>
+
+      <div class="modal hidden">
+        <div class="modal__content">
+          <div class="modal__logo">
+            <img src="img/logo-white.png" alt="Adaba Image" />
+          </div>
+          <div class="modal__img">
+            <img
+              src="img/image 220-1x.png"
+              alt="Image of people"
+              class="modal__content-image"
+            />
+          </div>
+          <p class="modal__text">Give permission, Share and Start Earning</p>
+          <p class="modal__p">Give your business a wider</p>
+          <p class="modal__p">Use Adaba today</p>
+        </div>
+
+        <form class="modal__form">
+          <h3 class="heading-tertiary">Create your account</h3>
+          <svg class="modal__close">
+            <use xlink:href="img/sprite.svg#icon-cross"></use>
+          </svg>
+          <div class="modal__form--group">
+            <input
+              type="text"
+              class="modal__form--input"
+              placeholder="First Name"
+              id="firstName"
+              required
+              autocomplete="off"
+            />
+            <label for="firstName" class="modal__form--label">First Name</label>
+          </div>
+          <div class="modal__form--group">
+            <input
+              type="text"
+              class="modal__form--input"
+              placeholder="Last Name"
+              id="lastName"
+              required
+              autocomplete="off"
+            />
+            <label for="lastName" class="modal__form--label">Last Name</label>
+          </div>
+          <div class="modal__form--group">
+            <input
+              type="email"
+              class="modal__form--input"
+              placeholder="Email"
+              id="Email"
+              required
+              autocomplete="off"
+            />
+            <label for="Email" class="modal__form--label">Email</label>
+          </div>
+          <div class="modal__form--group">
+            <input
+              type="text"
+              class="modal__form--input"
+              placeholder="@myIG handle"
+              id="instagram"
+              required
+            />
+            <label for="instagram" class="modal__form--label"
+              >@myIG handle</label
+            >
+          </div>
+          <div class="modal__form--group">
+            <button class="modal__form--btn">sign up</button>
+          </div>
+        </form>
+      </div>
+      <div class="overlay hidden"></div>
+    </div>
+    <!--  
+  
+    </main>
+
+    
+
+    <div class="overlay hidden"></div>
+
+    -->
+  </body>
+</html>
